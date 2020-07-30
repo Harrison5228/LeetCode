@@ -42,3 +42,28 @@ public class Solution {
         return index;
     }
 }
+
+
+
+//Accepted 
+/*
+Runtime: 252 ms: Your runtime beats 77.72 % of csharp submissions. (Not bad)
+Memory Usage: 31.1 MB: Your memory usage beats 29.42 % of csharp submissions. (Bad)
+*/
+public class Solution2 {
+    public int[] TwoSum(int[] nums, int target) {
+        Dictionary<int, int> member = new Dictionary<int, int>();
+        int Find = 0;
+        int[] result = new int[2];
+        for(int i = 0; i < nums.Length; i++){
+            Find = target - nums[i];
+            if(member.ContainsKey(Find)){
+                return new int[] { member.Where(w => w.Key == Find).Select(s => s.Value).FirstOrDefault(), i };
+            }
+            if(!member.ContainsKey(nums[i]))
+                member.Add(nums[i], i);
+        }
+        throw new Exception("No two sum solution");
+        
+    }
+}
