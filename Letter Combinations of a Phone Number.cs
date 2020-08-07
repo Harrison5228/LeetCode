@@ -1,3 +1,8 @@
+/*
+Runtime: 240 ms, faster than 81.81% of C# online submissions for Letter Combinations of a Phone Number.
+Memory Usage: 31.4 MB, less than 98.04% of C# online submissions for Letter Combinations of a Phone Number.
+*/
+//Accepted
 public class Solution {
     public IList<string> LetterCombinations(string digits) {
         
